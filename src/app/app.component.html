@@ -1,0 +1,20 @@
+<br><br>
+<div style="text-align:center;align-items:center;">
+  <h1>Assignment 1</h1>
+  <button (click)="sendData()" class="btn btn-outline-primary mt-2 mb-2 ">Pass Data</button>
+</div>  
+  
+  <app-child [stuInfo]="stuList" (clickStudent)="eventHandler($event)"></app-child>
+  <br><br><br>
+
+  
+  
+  <div>
+    <ul>
+      <li *ngFor="let data of getChildUsers; let i=index">{{data[i].fname}} {{data[i].lname}}</li>
+    </ul>
+  </div>
+  <div style="text-align:center;align-items:center;">
+  <h1>Assignment2</h1>
+  <app-child1  (countChange)="countHandle($event)"></app-child1>
+</div>
